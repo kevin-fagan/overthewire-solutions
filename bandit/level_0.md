@@ -5,6 +5,7 @@ The goal of this level is for you to log into the game using SSH. The host to wh
 
 ### Solution
 1. Login as `bandit0`
-```shell
-ssh bandit0@bandit.labs.overthewire.org -p 2220
-```
+   <br>
+    ```shell
+    ssh bandit0@bandit.labs.overthewire.org -p 2220
+    ```

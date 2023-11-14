@@ -6,13 +6,14 @@ The password for the next level is stored in a file called readme located in the
 ### Solution
 
 1. Ensure you are logged in as `bandit0`:
-   
-```shell
-ssh bandit0@bandit.labs.overthewire.org -p 2220
-```
+   <br>
+    ```shell
+    ssh bandit0@bandit.labs.overthewire.org -p 2220
+    ```
 
 2. Obtaining the password from `readme`
-```shell
-bandit0@bandit:~$ cat readme
-NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
-```
+   <br>
+    ```shell
+    bandit0@bandit:~$ cat readme
+    NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
+    ```
