@@ -10,15 +10,25 @@ The password for the next level is stored in the only human-readable file in the
     ssh bandit4@bandit.labs.overthewire.org -p 2220
     ```
 
-2. There are 10 within the `inhere` directory. One of these files contains the password for the next level. We can cat each file one by one, or we can cat them all at once like such:
+2. There are 10 within the `inhere` directory. One of these files contains the password for the next level. We can `cat` each file one by one, or we can use the `file` command to determine which file is human readable:
    <br>
     ```shell
-    bandit4@bandit:~/inhere$ cat ./-file*
-    QRrtZ�i�	�H
-                    |��ȧ����^��7L3��Y�ͯ	Ŵ����E�Y�ܚ	�V&��h�F���y���O̫��`�\�-⃐�Hx��2��K��i�x�#e�>��VO��p{�	���MUb4����gQ��eE}:�g���j8������<.�e��S��e 0�����]7�������b�<�~G=1��������B׃�"
-                                                ���W��9ؽ5lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
-    ���K�~�+��9"T���*Z$���"�r�
-    �Z�\�������ж�q���7����/�n��n
+    bandit4@bandit:~/inhere$ file ./-file*
+    ./-file00: data
+    ./-file01: data
+    ./-file02: data
+    ./-file03: data
+    ./-file04: data
+    ./-file05: data
+    ./-file06: data
+    ./-file07: ASCII text
+    ./-file08: data
+    ./-file09: data
     ```
     
-    The password for the next level is the only text within the above snippet that is human readable: `lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR`
+    We can see that `-file07` contains `ASCII text`. We can `cat` this file to obtain the password:
+    <br>
+    ```shell
+    bandit4@bandit:~/inhere$ cat ./-file07 
+    lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+    ```
