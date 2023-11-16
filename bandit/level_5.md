@@ -10,7 +10,7 @@ The password for the next level is stored in the only human-readable file in the
     ssh bandit4@bandit.labs.overthewire.org -p 2220
     ```
 
-2. There are 10 within the `inhere` directory. One of these files contains the password for the next level. We can `cat` each file one by one, or we can use the `file` command to determine which file is human readable:
+2. There are 10 files within the `inhere` directory. One of these files contains the password for the next level. We can `cat` each file one by one, or we can use the `file` command to determine which file is human readable:
    <br>
     ```shell
     bandit4@bandit:~/inhere$ file ./-file*
