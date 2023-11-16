@@ -14,7 +14,7 @@ The password for the next level is stored somewhere on the server and has all of
 ssh bandit6@bandit.labs.overthewire.org -p 2220
 ```
 
-2. We can use the `find` command to find the file we are looking for:
+2. We can use the `find` command to find the file we are looking for. Because the file we are looking for is somewhere on the server, ensure you start your search from the root (/) directory:
 ```shell
 bandit6@bandit:/$ find . -user bandit7 -size 33c -group bandit6
 find: ‘./etc/ssl/private’: Permission denied
