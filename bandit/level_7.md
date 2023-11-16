@@ -10,25 +10,25 @@ The password for the next level is stored somewhere on the server and has all of
 
 ### Solutions
 1. Ensure you are logged in as `bandit6`:
-   <br>
-    ```
-    ssh bandit6@bandit.labs.overthewire.org -p 2220
-    ```
-2. We can use the `find` command to find the file we are looking for:
-    <br>
-    ```shell
-    bandit6@bandit:/$ find . -user bandit7 -size 33c -group bandit6
-    find: ‘./etc/ssl/private’: Permission denied
-    find: ‘./etc/polkit-1/localauthority’: Permission denied
-    find: ‘./etc/sudoers.d’: Permission denied
-    .
-    .
-    .
-    ./var/lib/dpkg/info/bandit7.password
-    .
-    .
-    .
-    bandit6@bandit:/$ cat ./var/lib/dpkg/info/bandit7.password
-    z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
+```
+ssh bandit6@bandit.labs.overthewire.org -p 2220
+```
 
-    ```
+2. We can use the `find` command to find the file we are looking for:
+```shell
+bandit6@bandit:/$ find . -user bandit7 -size 33c -group bandit6
+find: ‘./etc/ssl/private’: Permission denied
+find: ‘./etc/polkit-1/localauthority’: Permission denied
+find: ‘./etc/sudoers.d’: Permission denied
+.
+.
+./var/lib/dpkg/info/bandit7.password
+.
+.
+```
+
+3. We can see that `./var/lib/dpkg/info/bandit7.password` was returned to us. Lets `cat` the file to see if it contains the password for the next level:
+```shell
+bandit6@bandit:/$ cat ./var/lib/dpkg/info/bandit7.password
+z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
+```

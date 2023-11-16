@@ -5,17 +5,16 @@ The password for the next level is stored in a file called spaces in this filena
 
 ### Solutions
 1. Ensure you are logged in as `bandit2`:
-   <br>
-    ```
-    ssh bandit2@bandit.labs.overthewire.org -p 2220
-    ```
+```
+ssh bandit2@bandit.labs.overthewire.org -p 2220
+```
+
 2. Having spaces in a filename is entirely acceptable. To correctly use the cat command on such a file, there are two methods. You can encase the filename in quotes, or you can use escape characters for the spaces:
-   <br>
-    ```shell
-    bandit2@bandit:~$ cat spaces\ in\ this\ filename 
-    aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
-    ```
-    ```shell
-    bandit2@bandit:~$ cat "spaces in this filename" 
-    aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
-    ```
+```shell
+bandit2@bandit:~$ cat spaces\ in\ this\ filename 
+aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+```
+```shell
+bandit2@bandit:~$ cat "spaces in this filename" 
+aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+```
