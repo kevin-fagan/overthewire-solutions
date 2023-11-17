@@ -1,0 +1,15 @@
+# Level 9
+
+### Instructions
+The password for the next level is stored in the file data.txt and is the only line of text that occurs only once
+
+### Solutions
+1. Ensure you are logged in as `bandit8`:
+```
+ssh bandit8@bandit.labs.overthewire.org -p 2220
+```
+2. The `uniq` command does not detect repeated lines unless they are adjacent. Therefore, before utilizing the `uniq` command, we need to first sort the file using the `sort` command. After sorting, we can pipe the output to `uniq`:
+```shell
+bandit8@bandit:~$ sort data.txt | uniq -u
+EN632PlfYiZbn3PhVK3XOGSlNInNE00t
+```
