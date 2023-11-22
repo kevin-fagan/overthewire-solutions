@@ -1,0 +1,23 @@
+# Level 15
+
+### Instructions
+The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost.
+
+### Solutions
+1. Ensure you are logged in as `bandit14`:
+```
+ssh bandit14@bandit.labs.overthewire.org -p 2220
+```
+
+2. We can obtain the password by using the `telnet` command:
+```shell
+bandit14@bandit:~$ telnet localhost 30000
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
+Correct!
+jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+
+Connection closed by foreign host.
+```
